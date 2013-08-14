@@ -50,3 +50,4 @@ gem 'carrierwave'
 gem "rmagick", "~> 2.13.2"
 gem "simple_form"
 gem "fog", "~> 1.3.1"
+gem 'rails_12factor', group: :production
