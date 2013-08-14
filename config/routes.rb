@@ -3,4 +3,5 @@ Todola::Application.routes.draw do
   root :to => 'places#index'
   resources :places
   resources :categories
+  resources :areas
 end

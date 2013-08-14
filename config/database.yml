@@ -6,6 +6,7 @@
 development:
   adapter: postgresql
   database: todola_development
+  host: localhost
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -13,9 +14,10 @@ development:
 test:
   adapter: postgresql
   database: todola_test
+  host: localhost
 
 production:
-  adapter: postgresql
-  database: todola_production
+  adapter: sqlite3
+  database: db/production.sqlite3
   pool: 5
   timeout: 5000
