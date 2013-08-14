@@ -4,12 +4,16 @@
 
 <p>What do you want to do?</p>
 
+<div class="place-grid">
+
 <% @places.each do |p| %> 
-  <div class="span3"> 
+  <div class="span2"> 
   <%= link_to (image_tag (p.image.thumb.url)), place_path(p) %>
   <h4><%= link_to p.name, place_path(p) %></h4>
   </div>
 <% end %>
+
+</div>
 
 <div style="clear: both;"></div>
 
