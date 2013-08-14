@@ -1,0 +1,18 @@
+  <h1><%= @place.name %></h1>
+  <%= @place.address %><br />
+  <%= @place.city %>, <%= @place.state %> <%= @place.zip %><br />
+  <%= @place.phone %><br />
+  <a href="<%= @place.website %>" target="_blank"><%= @place.website %></a><br /><br />
+  
+  <p><strong>Hours:</strong><br />
+  <%= @place.days %><br />
+  <%= @place.open.strftime("%I:%M%p") %> - <%= @place.close.strftime("%I:%M%p") %><br />
+  <%= @place.days2 %><br />
+  <%= @place.open2.strftime("%I:%M%p") %> - <%= @place.close2.strftime("%I:%M%p") %><br />
+  </p>
+  
+  <%= image_tag @place.image.url, :class => "listing-photo" %>
+
+<p><%= link_to "Edit Listing", edit_place_path(@place) %><br />
+<%= link_to "Delete Listing", place_path(@place), method: :delete, confirm: "You sure?" %><br />
+<%= link_to "Go back to list of places", places_path %></p>

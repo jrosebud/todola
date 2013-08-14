@@ -1,0 +1,25 @@
+<%= simple_form_for @place do |f| %>
+  <%= f.input :name, label: 'Name of Establishment/Place' %>
+  <%= f.input :address %>
+  <%= f.input :city %>
+  <%= f.input :state %>
+  <%= f.input :zip %>
+  <%= f.input :phone %>
+  <%= f.input :website %>
+  <%= f.input :days, label: 'Days Open' %>
+  <%= f.input :open, label: 'Opening Time', :include_blank => true %>
+  <%= f.input :close, label: 'Closing Time', :include_blank => true %>
+  <p>If the place has more than one set of hours, enter that here:</p>
+  <%= f.input :days2, label: 'Days Open' %>
+  <%= f.input :open2, label: 'Opening Time', :include_blank => true %>
+  <%= f.input :close2, label: 'Closing Time', :include_blank => true %>
+  Category<br />
+  <%= f.collection_select(:category_id, Category.all, :id, :name) %>
+  <br />
+  Area<br />
+  <%= f.collection_select(:area_id, Area.all, :id, :name) %>
+  <%= f.input :image %>
+  <br />
+  <%= f.input :description %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>

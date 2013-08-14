@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 
+  category_id: 
+  area_id: 
+  name: MyString
+  address: MyText
+  city: MyString
+  state: MyString
+  zip: MyString
+  phone: MyString
+  website: MyString
+  open: 2013-08-01 22:57:56
+  close: 2013-08-01 22:57:56
+  image: MyString
+
+two:
+  user_id: 
+  category_id: 
+  area_id: 
+  name: MyString
+  address: MyText
+  city: MyString
+  state: MyString
+  zip: MyString
+  phone: MyString
+  website: MyString
+  open: 2013-08-01 22:57:56
+  close: 2013-08-01 22:57:56
+  image: MyString

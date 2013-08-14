@@ -1,0 +1,16 @@
+<h1>Welcome to ToDo L.A.!</h1>
+
+<h2><em>Your bossy friend who always has a suggestion.</em></h2>
+
+<p>What do you want to do?</p>
+
+<% @places.each do |p| %> 
+  <div class="span3"> 
+  <%= link_to (image_tag (p.image.thumb.url)), place_path(p) %>
+  <h4><%= link_to p.name, place_path(p) %></h4>
+  </div>
+<% end %>
+
+<div style="clear: both;"></div>
+
+<p><%= link_to "Create a new listing", new_place_path %></p>
