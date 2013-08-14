@@ -16,7 +16,7 @@ class PlacesController < ApplicationController
     @place.user = current_user
     
     if @place.save
-      redirect_to place_path
+      render :show
     else
       render :new
     end
