@@ -7,7 +7,7 @@
 <div class="place-grid">
 
 <% @places.each do |p| %> 
-  <div class="span2"> 
+  <div class="span3"> 
   <%= link_to (image_tag (p.image.thumb.url)), place_path(p) %>
   <h4><%= link_to p.name, place_path(p) %></h4>
   </div>
