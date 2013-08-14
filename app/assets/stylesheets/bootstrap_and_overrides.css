@@ -17,5 +17,6 @@
   }
   
   .place-grid {
-      margin-left: -2.564102564102564%;
+      margin-left: 0;
+      overflow: hidden;
   }
