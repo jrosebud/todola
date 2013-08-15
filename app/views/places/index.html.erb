@@ -4,13 +4,12 @@
 
 <p>What do you want to do?</p>
 
-<%= simple_form_for @place, url: place_search_path do |f| %>  
-  <p>I'm in <%= f.collection_select(:area_id, Area.all, :id, :name) %>
-  <%= f.button :submit, "Search", class: 'btn btn-primary' %></p>
-<% end %>
+<%= render "searchform" %>
 
 <%= render "grid" %>
 
 <div style="clear: both;"></div>
 
+<% if user_signed_in? %>
 <p><%= link_to "Create a new listing", new_place_path %></p>
+<% end %>

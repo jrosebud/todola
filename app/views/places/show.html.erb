@@ -13,6 +13,8 @@
   
   <%= image_tag @place.image.url, :class => "listing-photo" %>
 
+<br />
+
 <p>
 <% if user_signed_in? %>
   <%= link_to "Edit Listing", edit_place_path(@place) %><br />
@@ -20,3 +22,7 @@
 <% end %>
 <%= link_to "Go back to list of places", places_path %>
 </p>
+
+<p><strong>Looking for something else to do?</strong></p>
+
+<%= render "searchform" %>
