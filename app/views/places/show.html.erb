@@ -11,9 +11,11 @@
   <%= @place.open2.strftime("%I:%M%p") %> - <%= @place.close2.strftime("%I:%M%p") %><br />
   </p>
   
-  <%= image_tag @place.image.url, :class => "listing-photo" %>
+  <p><%= image_tag @place.image.url, :class => "listing-photo" %></p>
 
 <br />
+
+<hr />
 
 <p>
 <% if user_signed_in? %>
@@ -22,7 +24,3 @@
 <% end %>
 <%= link_to "Go back to list of places", places_path %>
 </p>
-
-<p><strong>Looking for something else to do?</strong></p>
-
-<%= render "searchform" %>
