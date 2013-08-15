@@ -3,7 +3,6 @@ class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @areas = Area.all
     @places = Place.all
   end
   
