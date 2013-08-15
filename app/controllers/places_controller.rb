@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
 
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @places = Place.all
@@ -34,6 +34,12 @@ class PlacesController < ApplicationController
     place.update_attributes place_params
     
     redirect_to place_path(place)
+  end
+  
+  def destroy
+    Place.find(params[:id]).destroy
+    
+    redirect_to places_path, flash: { success: "Listing was deleted." }
   end
   
   private
