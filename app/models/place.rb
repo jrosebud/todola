@@ -6,4 +6,8 @@ class Place < ActiveRecord::Base
   mount_uploader :image, PhotoUploader
   
   validates_presence_of :name
+  
+  def self.search(query)
+    Place.where(":area_id LIKE :query", query: "%#{query}%")
+  end
 end
