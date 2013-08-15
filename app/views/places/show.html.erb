@@ -1,3 +1,7 @@
+ <div class="row-fluid">
+ 
+ <div class="span5">
+ 
   <h1><%= @place.name %></h1>
   <%= @place.address %><br />
   <%= @place.city %>, <%= @place.state %> <%= @place.zip %><br />
@@ -11,7 +15,15 @@
   <%= @place.open2.strftime("%I:%M%p") %> - <%= @place.close2.strftime("%I:%M%p") %><br />
   </p>
   
+  </div>
+  
+  <div class="span7">
+  
   <p><%= image_tag @place.image.url, :class => "listing-photo" %></p>
+  
+  </div>
+  
+  </div>
 
 <hr />
 
