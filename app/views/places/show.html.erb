@@ -13,6 +13,10 @@
   
   <%= image_tag @place.image.url, :class => "listing-photo" %>
 
-<p><%= link_to "Edit Listing", edit_place_path(@place) %><br />
-<%= link_to "Delete Listing", place_path(@place), method: :delete, confirm: "You sure?" %><br />
-<%= link_to "Go back to list of places", places_path %></p>
+<p>
+<% if user_signed_in? %>
+  <%= link_to "Edit Listing", edit_place_path(@place) %><br />
+  <%= link_to "Delete Listing", place_path(@place), method: :delete, confirm: "You sure?" %><br />
+<% end %>
+<%= link_to "Go back to list of places", places_path %>
+</p>
