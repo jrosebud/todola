@@ -4,6 +4,12 @@ class PlacesController < ApplicationController
 
   def index
     @places = Place.all
+    @place = Place.new
+  end
+  
+  def search
+    @place = Place.new
+    @places = Place.search params[:place][:area_id]
   end
   
   def new

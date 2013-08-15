@@ -8,6 +8,6 @@ class Place < ActiveRecord::Base
   validates_presence_of :name
   
   def self.search(query)
-    Place.where(":area_id LIKE :query", query: "%#{query}%")
+    Place.where("area_id LIKE :query", query: "%#{query}%")
   end
 end

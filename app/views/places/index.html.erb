@@ -5,20 +5,11 @@
 <p>What do you want to do?</p>
 
 <%= simple_form_for @place, url: place_search_path do |f| %>  
-  <p>I'm in <%= f.collection_select(:area_id, Area.all, :id, :name) %></p>
-  <%= f.button :submit, class: 'btn btn-primary' %>
+  <p>I'm in <%= f.collection_select(:area_id, Area.all, :id, :name) %>
+  <%= f.button :submit, "Search", class: 'btn btn-primary' %></p>
 <% end %>
 
-<div class="place-grid">
-
-<% @places.shuffle.each do |p| %> 
-  <div class="span3 place-listing"> 
-  <%= link_to (image_tag (p.image.thumb.url)), place_path(p) %>
-  <h4><%= link_to p.name, place_path(p) %></h4>
-  </div>
-<% end %>
-
-</div>
+<%= render "grid" %>
 
 <div style="clear: both;"></div>
 

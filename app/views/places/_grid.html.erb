@@ -1,0 +1,8 @@
+<div class="place-grid">
+<% @places.shuffle.each do |p| %> 
+  <div class="span3 place-listing"> 
+  <%= link_to (image_tag (p.image.thumb.url)), place_path(p) %>
+  <h4><%= link_to p.name, place_path(p) %></h4>
+  </div>
+<% end %>
+</div>
