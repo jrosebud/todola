@@ -6,9 +6,8 @@
 
 <%= simple_form_for @place, url: place_search_path do |f| %>  
   <p>I'm in <%= f.collection_select(:area_id, Area.all, :id, :name) %></p>
-  <%= f.button :submit "Do it!", class: 'btn btn-primary' %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
 <% end %>
-
 
 <div class="place-grid">
 
