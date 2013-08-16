@@ -48,8 +48,12 @@ class PlacesController < ApplicationController
     redirect_to places_path, flash: { success: "Listing was deleted." }
   end
   
-  def self.time_range(open, close, open2, close2)
-      Post.where( (open > Time.now AND close < Time.now) OR (open2 > Time.now and close2 < Time.now), open close, open2, close2).limit(4)
+  def self.time_range
+    open = Place.open
+    close = Place.close
+    open2 = Place.open2
+    close2 = Place.close2
+    Place.where( ('open > Time.now AND close < Time.now') OR ('open2 > Time.now and close2 < Time.now'), open, close, open2, close2).limit(4)
   end
   
   private
