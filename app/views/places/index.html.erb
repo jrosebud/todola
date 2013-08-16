@@ -8,6 +8,19 @@
 
 <hr />
 
+<h3>Here's what's happening now!</h3>
+
+<div class="place-grid">
+<% @places.time_range.each do |p| %> 
+  <div class="span3 place-listing"> 
+  <%= link_to (image_tag (p.image.thumb.url)), place_path(p) %>
+  <h4><%= link_to p.name, place_path(p) %></h4>
+  </div>
+<% end %>
+</div>
+
+<hr />
+
 <h3>Or go out and explore these places!</h3>
 
 <%= render "grid" %>
@@ -15,5 +28,6 @@
 <div style="clear: both;"></div>
 
 <% if user_signed_in? %>
+<hr />
 <p><%= link_to "Create a new listing", new_place_path %></p>
 <% end %>
